@@ -28,6 +28,17 @@ text-decoration: none;    }
 <div style="height:10%;color:snow;font-size:50px">
 乔清瑀的个人云盘
 </div>
+<div class="small">
+<a href="upload/">
+<p style='font-size:40px;'>上传文件</p>
+<p style='font-size:25px;'>无法中断</p>
+</a></div>
+<div class="small">
+<a href="delete.php">
+<p style='font-size:40px;'>删除文件</p>
+<p style='font-size:25px;color:red'>不可恢复</p>
+</a></div>
+
 <div style="float:left;height:90%;color:snow">
         <?php 
         
@@ -56,7 +67,7 @@ text-decoration: none;    }
 	
 	$result=$con->query('set names utf8');
 
-        $sql="SELECT * FROM DOC WHERE 1";
+        $sql="SELECT * FROM `DOC`";
         $result=$con->query($sql);
 
 if($result){
