@@ -26,7 +26,7 @@ text-decoration: none;    }
 <title>文件系统</title>
 </head>
 <div style="height:10%;color:snow;font-size:50px">
-乔清瑀的个人云盘
+个人云盘
 </div>
 <div class="small">
 <a href="upload/">
