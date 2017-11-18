@@ -69,6 +69,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
     var end;
     var blob;
     var pecent;
+    var random=Math.floor(Math.random()*10000)
 
     function upfile(){
         start=0;
@@ -136,6 +137,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
             fd=new FormData();
             fd.append('mof',blob);
             fd.append('name',file.name);
+            fd.append('rname',random+file.name);
             //console.log(fd);
             xhr.send(fd);
         }else{
@@ -144,6 +146,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
             xhrend.open("POST","sql.php",true);
             end.append("size",file.size);
             end.append("name",file.name);
+            end.append("rname",random+file.name)
             xhrend.send(end);
             xhrend.onreadystatechange=function(){
                 if(this.readyState==4){
