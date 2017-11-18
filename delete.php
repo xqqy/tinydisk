@@ -29,6 +29,7 @@ text-decoration: none;    }
 删除文件
 </div>
 <div style="float:left;height:90%;color:snow">
+<div class="small"><a href="../"><button>返回</button></button></a></div>
         <?php 
         
         class METRO/*是时候面向对象了！*/{
@@ -84,6 +85,6 @@ if($result){
                 unlink($_GET['DEL']);
                 $sql="DELETE FROM `DOC` WHERE `PATH`='".$_GET['DEL']."'";
                 $result=$con->query($sql);
-                echo "<script language='javascript'>alert('删除成功');document.location='/doc/delete.php';</script>";
+                echo "<script language='javascript'>alert('删除成功');document.location='delete.php';</script>";
         }
 ?>

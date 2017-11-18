@@ -13,16 +13,16 @@ $type = trim(strrchr($_POST['name'], '.'),'.');
 if($file['error']==0){
         if(!file_exists('./upload/'.$_POST['name'])){
             if(!move_uploaded_file($file['tmp_name'],'./upload/'.$_POST['name'])){
-                echo 'failed';
+                echo '移动文件失败';
             }
         }else{
             $content=file_get_contents($file['tmp_name']);
-            if (!file_put_contents('./upload/upload.'.$type, $content,FILE_APPEND)) {
-                echo 'failed';
+            if (!file_put_contents('./upload/'.$_POST['name'], $content,FILE_APPEND)) {
+                echo '合并文件失败';
             }
 }
 }else{
-    echo 'failed';
+    echo '文件上传失败';
 }
 
 ?>
