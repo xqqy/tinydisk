@@ -152,7 +152,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
                 if(this.readyState==4){
                 if(this.status==200 && this.responseText=="done"){
                     alert("上传成功")
-		    setTimeout("document.location = '../'",3000)
+		    document.location = '../'
                     return;
                 }
                 else{

@@ -38,18 +38,10 @@ text-decoration: none;    }
 <span style="font-size:50px">
 个人云盘
 </span>
+<a href="/upload"><button>上传文件</button></a>
+<a href="delete.php"><button>删除文件</button></a>
 <a href="logout.html"><button>登出</button></a>
 </div>
-<div class="small">
-<a href="upload/">
-<p style='font-size:40px;'>上传文件</p>
-<p style='font-size:25px;'>无法中断</p>
-</a></div>
-<div class="small">
-<a href="delete.php">
-<p style='font-size:40px;'>删除文件</p>
-<p style='font-size:25px;color:red'>不可恢复</p>
-</a></div>
 
 <div style="float:left;height:90%;color:snow">
         <?php 

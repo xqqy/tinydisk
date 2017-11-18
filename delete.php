@@ -35,11 +35,11 @@ text-decoration: none;    }
 </style>
 <title>文件系统</title>
 </head>
-<div style="height:10%;color:snow;font-size:50px">
-删除文件
+<div style="height:10%;color:snow;">
+<span style="font-size:50px">删除文件</span>
+<a href="../"><button>返回</button></button></a>
 </div>
 <div style="float:left;height:90%;color:snow">
-<div class="small"><a href="../"><button>返回</button></button></a></div>
         <?php 
         
         class METRO/*是时候面向对象了！*/{

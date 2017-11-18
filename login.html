@@ -2,7 +2,7 @@
 function set(){
     setCookie("uid",document.getElementById("uid").value,7);
     setCookie("pswd",document.getElementById("pswd").value,7);
-    document.location="index.php";
+
 }
 function setCookie(cname,cvalue,exdays){
 	var d = new Date();
@@ -24,8 +24,10 @@ function getCookie(cname){
 <head>
 <meta charset="UTF-8">
 <title>login</title>
+<form action="index.php">
 帐号：
 <input type="text" id="uid"><br />
 密码：
 <input type="password" id="pswd"><br />
-<button onclick="javascript:set()">登录</button>
+<input type="submit" value="登录"  onclick="javascript:set()"></button>
+</form>
