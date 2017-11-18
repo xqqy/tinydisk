@@ -1,3 +1,13 @@
+<?php
+if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
+        if($_COOKIE['uid']!="123" and $_COOKIE["pswd"]!="321"){
+                die("<script>document.location='login.html'</script>");
+        }
+}else{
+        die("<script>document.location='login.html'</script>");
+}
+
+?>
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">

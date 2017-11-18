@@ -1,7 +1,16 @@
+<?php
+if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
+        if($_COOKIE['uid']!="123" and $_COOKIE["pswd"]!="321"){
+                die("<script>document.location='login.html'</script>");
+        }
+}else{
+        die("<script>document.location='login.html'</script>");
+}
+
+?>
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-
 <link href="search.css" rel="stylesheet" />
 <style>
 body{width: 100%;   
@@ -25,8 +34,11 @@ text-decoration: none;    }
 </style>
 <title>文件系统</title>
 </head>
-<div style="height:10%;color:snow;font-size:50px">
+<div style="height:10%;color:snow;">
+<span style="font-size:50px">
 个人云盘
+</span>
+<a href="logout.html"><button>登出</button></a>
 </div>
 <div class="small">
 <a href="upload/">
