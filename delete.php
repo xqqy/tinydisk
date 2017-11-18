@@ -37,7 +37,7 @@ text-decoration: none;    }
 </head>
 <div style="height:10%;color:snow;">
 <span style="font-size:50px">删除文件</span>
-<a href="./"><button>返回</button></button></a>
+<a href="./"><button>返回</button></a>
 </div>
 <div style="float:left;height:90%;color:snow">
         <?php 
@@ -55,14 +55,9 @@ text-decoration: none;    }
                 }
 
                 function __construct($row){
-                        if($row['PATH']=="upload/"){
-                                $this->path="/doc/";
-                                $this->name="返回";
-                                $this->info="";
-                        }else{
                         $this->path="delete.php?DEL=".$row['PATH'];
                         $this->name=$row['NAME'];
-                        $this->info=$row['INFO'];}
+                        $this->info=$row['INFO'];
                 }
                 
                 
@@ -79,10 +74,8 @@ text-decoration: none;    }
 if($result){
     // 输出数据
     while($row =  $result->fetch_assoc()){
-            if($row['PATH']!="delete.php"){
                 $now= new METRO($row);
                 $now->OUT();}
-    }
 } else {echo "没有结果";} ?>
 </div>
 
