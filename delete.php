@@ -37,7 +37,7 @@ text-decoration: none;    }
 </head>
 <div style="height:10%;color:snow;">
 <span style="font-size:50px">删除文件</span>
-<a href="../"><button>返回</button></button></a>
+<a href="./"><button>返回</button></button></a>
 </div>
 <div style="float:left;height:90%;color:snow">
         <?php 
