@@ -38,7 +38,7 @@ text-decoration: none;    }
 <span style="font-size:50px">
 个人云盘
 </span>
-<a href="/upload"><button>上传文件</button></a>
+<a href="./upload"><button>上传文件</button></a>
 <a href="delete.php"><button>删除文件</button></a>
 <a href="logout.html"><button>登出</button></a>
 </div>
