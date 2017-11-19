@@ -10,7 +10,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
 ?>
 <!DOCTYPE html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="search.css" rel="stylesheet" />
 <style>
@@ -22,16 +22,10 @@ body{width: 100%;
 .small{
 float:left;
 margin: 5px;
-padding: 15px;
-/*width: 300px;
-height: 300px;*/
+padding: 10px;
 text-align: center;
 background-color: snow/*#a1e9dc  b4feff*/;
-/*position: absolute;   */
-top: 50%;   
-left:50%;   
-/*margin: -170px 0 0 -170px;   */
-text-decoration: none;    }
+}
 </style>
 <title>文件系统</title>
 </head>
@@ -49,8 +43,8 @@ text-decoration: none;    }
 
                 function OUT(){
                         echo "<div class='small'>".'<a href='.$this->path .'>';/*设置为链接模式*/
-                        echo "<p style='font-size:40px;'>".$this->name."</p>";/*输出title*/
-                        echo "<p style='font-size:25px;'>".$this->info."</p>";/*输出帮助*/
+                        echo "<p style='font-size:200%;'>".$this->name."</p>";/*输出title*/
+                        echo "<p style='font-size:100%;'>".$this->info."</p>";/*输出帮助*/
                         echo"</a></div>";
                 }
 

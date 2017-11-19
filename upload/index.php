@@ -12,7 +12,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 <title>分割大文件上传</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     #test{
         width: 200px;
