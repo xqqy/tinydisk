@@ -69,14 +69,15 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
     var end;
     var blob;
     var pecent;
-    var random=Math.floor(Math.random()*10000)
+    var random=Math.floor(Math.random()*10000);
+    var name;
 
     function upfile(){
         start=0;
         end=LENGTH+start;
 
         file=document.getElementsByName('mof')[0].files[0];
-
+        name=file.name.replace(/\s/g,"_")
         if(!file){
             alert('请选择文件');
             return;
@@ -85,7 +86,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
         var xhrboth=new XMLHttpRequest();
         xhrboth.open("POST","check.php",true);
         var dot=new FormData;
-        dot.append("name",file.name)
+        dot.append("name",name)
         xhrboth.send(dot);
         xhrboth.onreadystatechange=function(){
             if(this.readyState==4){
@@ -136,8 +137,8 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
             blob=file.slice(start,end);
             fd=new FormData();
             fd.append('mof',blob);
-            fd.append('name',file.name);
-            fd.append('rname',random+file.name);
+            fd.append('name',name);
+            fd.append('rname',random+name);
             //console.log(fd);
             xhr.send(fd);
         }else{
@@ -145,8 +146,8 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
             end=new FormData();
             xhrend.open("POST","sql.php",true);
             end.append("size",file.size);
-            end.append("name",file.name);
-            end.append("rname",random+file.name)
+            end.append("name",name);
+            end.append("rname",random+name)
             xhrend.send(end);
             xhrend.onreadystatechange=function(){
                 if(this.readyState==4){
