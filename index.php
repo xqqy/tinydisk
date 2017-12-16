@@ -12,7 +12,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" charset="utf-8">
     <title>文件中心</title>
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
