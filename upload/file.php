@@ -2,9 +2,11 @@
 if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
         if($_COOKIE['uid']!="123" or $_COOKIE["pswd"]!="321"){
             header('HTTP/1.0 401 Unauthorized');
+            exit();
         }
 }else{
     header('HTTP/1.0 401 Unauthorized');
+    exit();
 }
 
 /****

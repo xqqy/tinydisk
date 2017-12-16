@@ -79,7 +79,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
 </div>
     <div class="container">
         <?php 
-            
+
             class METRO{
                     var $atid;
                     var $name;
@@ -104,10 +104,17 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
                     
             }
     
-            $con = new mysqli("localhost","doc","EmZnmEkIRKFStf91","DOC");//connect mysql
+            $con = new SQLite3("doc.db");//connect mysql
             if (!$con){die("Could not connect!");}
         
-        $result=$con->query('set names utf8');
+            $con->query(
+                'CREATE TABLE IF NOT EXISTS `DOC` (
+                    `NAME` varchar(255) NOT NULL ,
+                    `PATH` varchar(255) NOT NULL ,
+                    `INFO` varchar(255) NOT NULL DEFAULT "没有解释的文件",
+                    `HASH` varchar(255) NOT NULL
+                  )'
+            );
     
             $sql="SELECT * FROM `DOC`";
             $result=$con->query($sql);
@@ -116,7 +123,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
         // 输出数据
         echo '<div class="row clearfix">';
         $t=0;
-        while($row =  $result->fetch_assoc()){
+        while($row =  $result->fetchArray(SQLITE3_ASSOC)){
             if(t<3){
                     $now= new METRO($row);
                     $now->OUT();

@@ -1,7 +1,15 @@
 <?php
-$con = new mysqli("localhost","doc","EmZnmEkIRKFStf91","DOC");/*connect mysql*/
-if ($con->connect_error){die("Could not connect!");}
-$result=$con->query('set names utf8');
+if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
+    if($_COOKIE['uid']!="123" or $_COOKIE["pswd"]!="321"){
+        header('HTTP/1.0 401 Unauthorized');
+        exit();
+    }
+}else{
+header('HTTP/1.0 401 Unauthorized');
+exit();
+}
+$con = new SQLite3("doc.db");/*connect mysql*/
+if (!$con){die("Could not connect!");}
 
 if(!unlink($_POST['PATH'])){die("文件删除失败");}
 $sql="DELETE FROM `DOC` WHERE `PATH`='".$_POST['PATH']."'";
