@@ -37,7 +37,7 @@ function upfile(){
                 return;
             }
             else{
-                document.location="/index.php?error="+xhrboth.responseText;
+                document.location="index.php?error="+xhrboth.responseText;
                 document.getElementById("upimg").style.display="none";
                 document.getElementById("load").style.display="none";
                 return;
@@ -100,7 +100,7 @@ function up(){
             if(this.status==200 && this.responseText=="done"){
                 document.getElementById("upimg").style.display="none";
                 document.getElementById("load").style.display="none";
-                document.location = '/index.php?success=上传成功'
+                document.location = 'index.php?success=上传成功'
                 return;
             }
             else{

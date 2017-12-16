@@ -151,12 +151,12 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
             if(xhr.readyState==4 ){
                 if(xhr.status==200){
                     if(xhr.responseText=='done'){
-                        document.location="/index.php?success=删除成功"
+                        document.location="index.php?success=删除成功"
                     } else{
-                        document.location="/index.php?error="+xhr.responseText;
+                        document.location="index.php?error="+xhr.responseText;
                     }
                 } else{
-                    document.location="/index.php"+"网络错误"+xhr.status
+                    document.location="index.php"+"网络错误"+xhr.status
                 }
             }
         }
