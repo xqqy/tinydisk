@@ -163,7 +163,7 @@ if(!empty($_COOKIE['uid']) and !empty($_COOKIE['pswd'])){
                         document.location="index.php?error="+xhr.responseText;
                     }
                 } else{
-                    document.location="index.php"+"网络错误"+xhr.status
+                    document.location="index.php?error="+"网络错误"+xhr.status
                 }
             }
         }
