@@ -4,4 +4,4 @@ doc.sql记录了mysql表结构
 index.php用于显示当前文件
 delete.php用于删除文件
 upload文件夹配置上传文件和上传的文件
-V2.0.0.2
+V2.0.0.3
