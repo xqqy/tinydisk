@@ -2,7 +2,7 @@
 index.php用于显示当前文件
 api文件夹内包含了操作
 .htaccess为apache2.4设计
-V2.1.0.1
+V2.1.0.2
 
 
 ##更新功能：
