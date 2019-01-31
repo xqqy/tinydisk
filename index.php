@@ -1,3 +1,6 @@
+<?php
+    require("h2.php");
+?>
 <!DOCTYPE html>
 <html>
 

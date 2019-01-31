@@ -6,14 +6,14 @@ auth();//授权验证
 $con = new SQLite3("doc.db");
 if (!$con){die("Could not connect!");}
 
-$sql="SELECT `PATH` FROM `DOC` WHERE `HASH`='".$_POST["hash"]."' OR `FILENAME`='".$_POST['filename']."';";
+$sql="SELECT `PATH` FROM `DOC` WHERE `HASH`='".SQLite3::escapeString($_POST["hash"])."' OR `FILENAME`='".SQLite3::escapeString($_POST['filename'])."';";
 $result= $con->query($sql);
 
 
 if($row=$result->fetchArray(SQLITE3_ASSOC)){
     die("服务器端有重复文件或重名文件:".$row['FILENAME']);
 }else{
-    $sql="SELECT `PKGNUM` FROM `UNDONE` WHERE `HASH`='".$_POST["hash"]."';";
+    $sql="SELECT `PKGNUM` FROM `UNDONE` WHERE `HASH`='".SQLite3::escapeString($_POST["hash"])."';";
     $result= $con->query($sql);
     if($row=$result->fetchArray(SQLITE3_ASSOC)){//断点续传
         if(!empty($row['PKGNUM'])){

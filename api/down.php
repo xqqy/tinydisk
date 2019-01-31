@@ -8,7 +8,7 @@ if(empty($_GET['filename'])){//检查输入是否为空
 	echo '<html><body><h1>404 File Not Found!</h1><br/><p>喵网络服务</p></body></html>';
 	exit;
 }
-download("upload/".$_GET['filename'],$_GET['filename']);
+download("upload/".SQLite3::escapeString($_GET['filename']),SQLite3::escapeString($_GET['filename']));
 
 function download($filepath,$filename){//下载进程
 	if(!$filepath||!is_file($filepath) || !file_exists($filepath)){//检查文件是否存在
