@@ -1,6 +1,3 @@
-<?php
-    require("h2.php");
-?>
 <!DOCTYPE html>
 <html>
 
@@ -79,7 +76,7 @@ class METRO {
                                     <h2>' . $this->name . '</h2>
                                     <p>文件大小：' . $this->info . '</p>
                                     <p>
-                                        <a class="btn" href="api/down.php?filename=' . $this->path . '">下载 >></a>
+                                        <a class="btn" href="api/down.php?filename=' . $this->path . '&trueFilename='.$this->name.'">下载 >></a>
                                         <a class="btn" onclick=javascript:del("' . $this->path . '")>删除 ></a>
                                     </p>
                              </div>';
