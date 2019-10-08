@@ -183,7 +183,7 @@ function successing(what){
     '</button>'+
     what
     +'</div>';
-    setTimeout(() => {
+    setTimeout(function() {
         document.getElementById("warn").innerHTML="";
         document.getElementById("warn").style.animation="";
 
@@ -198,7 +198,7 @@ function erroring(what){
     '</button>'+
     what
     +'</div>';
-    setTimeout(() => {
+    setTimeout(function() {
         document.getElementById("warn").style.animation="";
 
         document.getElementById("warn").innerHTML="";
@@ -212,7 +212,7 @@ function infoing(what){
     '</button>'+
     what
     +'</div>';
-    setTimeout(() => {
+    setTimeout(function() {
         document.getElementById("warn").style.animation="";
         document.getElementById("warn").innerHTML="";
     }, 4001);
@@ -225,7 +225,7 @@ function warning(what){
     '</button>'+
     what
     +'</div>';
-    setTimeout(() => {
+    setTimeout(function() {
         document.getElementById("warn").style.animation="";
         document.getElementById("warn").innerHTML="";
     }, 4001);
